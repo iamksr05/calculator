@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="bg"></div>
+
+    <main>
+        <div class="actions">
+            <div class="calc-title">
+                CALCULATOR
+            </div>
+            <div class="num-input">
+                <div class="prev-op"><span class="operand1">120</span>&nbsp;&nbsp;<span class="operation">+</span>&nbsp;&nbsp;<span class="operand2">50</span></div>
+                <div class="result" id="result"><span id="num1"></span> <span id="operator"></span> <span id="num2"></span></div>
+            </div>
+            <div class="calc-body">
+                <button class="AC" onclick="clearAll()">AC</button>
+                <button class="nums op exposure"><img src="exposure.svg" alt="+/-"></button>
+                <button class="nums">%</button>
+                <button class="op"><img src="divide.svg" alt="/" width="32px"></button>
+                <button class="nums" onclick="seven()">7</button>
+                <button class="nums" onclick="eight()">8</button>
+                <button class="nums" onclick="nine()">9</button>
+                <button class="op"><img src="multiply.svg" alt="x" width="18px"></button>
+                <button class="nums" onclick="four()">4</button>
+                <button class="nums" onclick="five()">5</button>
+                <button class="nums" onclick="six()">6</button>
+                <button class="op" onclick="minus()"><img src="minus.svg" alt="-" width="18px"></button>
+                <button class="nums" onclick="one()">1</button>
+                <button class="nums" onclick="two()">2</button>
+                <button class="nums" onclick="three()">3</button>
+                <button class="op" onclick="plus()"><img src="plus.svg" alt="+" width="18px"></button>
+                <button class="nums" onclick="zero()">0</button>
+                <button class="nums" onclick="dot()">.</button>
+                <button class="nums op equal"><img src="equal.svg" alt="=" width="30px"></button>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        // let one, two, three, four, five, six, seven, eight, nine, zero;
+        let num1 = document.querySelector("#num1");
+        let operator = document.querySelector("#operator");
+
+        function clearAll() {
+            num1.textContent = "";
+            operator.textContent="";
+        }
+        
+        function one() {
+            num1.textContent += "1";
+        }
+
+        function two() {
+            num1.textContent += "2";
+        }
+
+        function three() {
+            num1.textContent += "3";
+        }
+
+        function four() {
+            num1.textContent += "4";
+        }
+
+        function five() {
+            num1.textContent += "5";
+        }
+
+        function six() {
+            num1.textContent += "6";
+        }
+
+        function seven() {
+            num1.textContent += "7";
+        }
+        
+        function eight() {
+            num1.textContent += "8";
+        }
+        
+        function nine() {
+            num1.textContent += "9";
+        }
+        
+        function zero() {
+            num1.textContent += "0";
+        }
+
+        function dot() {
+            num1.textContent += ".";
+        }
+
+
+
+        let vplus, vminus, vdiv, vmul;
+
+        function plus() {
+            vplus = 1, vminus = 0, vdiv = 0, vmul = 0;
+            operator.innerHTML = "<img src='plus.svg' alt='+' width='30px' style='font-weight:bold;'>";
+        }
+
+        function minus() {
+            vplus = 0, vminus = 1, vdiv = 0, vmul = 0;
+            operator.textContent = "-";
+        }
+
+        function mul() {
+            vplus = 0, vminus = 0, vdiv = 0, vmul = 1;
+            operator.innerHTML = ""
+        }
+
+        function div() {
+            vplus = 1, vminus = 0, vdiv = 1, vmul = 0;
+            operator.textContent = "+"
+        }
+    </script>
+</body>
+
+</html>

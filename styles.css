@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Grotesk', 'Noto Sans', sans-serif;
+}
+
+.bg {
+    background:
+        radial-gradient(ellipse at top, rgba(117, 159, 225, 0.25), rgba(2, 20, 34, 0.1)),
+        radial-gradient(ellipse at top, transparent -10%, rgba(0, 0, 0, 0.6) 90%), #0b1320;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+main {
+    width: 390px;
+    height: 670px;
+    background-color: rgba(30, 42, 60, 0.6);
+    border-radius: 35px;
+    border: 1px solid #253648;
+    box-shadow: 0px 0px 20px rgba(94, 94, 215, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.actions {
+    width: 85%;
+    height: 90%;
+    /* background-color: rgba(30, 42, 60, 0); */
+}
+
+.calc-title {
+    font-weight: bold;
+    color: #6c6c6c;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.num-input {
+    /* background-color: rgba(84, 84, 237, 0.4); */
+    margin-top: 42px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.prev-op {
+    text-align: right;
+    font-size: 18px;
+    color: #6c6c6c;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.result {
+    text-align: right;
+    height: 100px;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.calc-body {
+    margin-top: 20px;
+    /* background-color: rgba(84, 84, 237, 0.4); */
+    height: 415px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    gap: 15px
+}
+
+.calc-body button:last-child {
+    grid-column: span 2;
+}
+
+.calc-body button {
+    /* width: 4.5rem;
+    height: 4.5rem; */
+    border-radius: 70px;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+.op {
+    background-color: #1D2F47;
+    border: 1px solid #243c5d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.07s ease-in;
+}
+
+.nums {
+    background-color: #212c3b;
+    border: 1px solid #2d3949;
+    color: white;
+    transition: transform 0.07s ease-in;
+    
+}
+
+.AC {
+    color: #F57173;
+    background-color: rgba(73, 54, 68, 0.5);
+    border: 1px solid rgb(83, 54, 68);
+    transition: transform 0.07s ease-in;
+}
+
+.equal {
+    border: 1px solid #243c5d;
+    background-color: rgba(44, 44, 239, 0.6);
+}
+
+.op:hover {
+    background-color: #1c314a;
+    border: 1px solid #2f496e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px rgba(41, 120, 247, 0.15);
+    cursor: pointer;
+}
+
+.nums:hover {
+    background-color: #283142;
+    border: 1px solid #4b5e75;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+
+.AC:hover {
+    color: #F57173;
+    background-color: rgba(87, 66, 81, 0.5);
+    border: 1px solid rgb(95, 63, 78);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px rgba(227, 145, 145, 0.25);
+    cursor: pointer;
+}
+
+.equal:hover {
+    background-color: rgba(43, 128, 18, 0.6);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px rgba(12, 190, 68, 0.25);
+    cursor: pointer;
+}
+
+.op:active {
+    background-color: #1c314a;
+    border: 1px solid #2f496e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    box-shadow: 0px 0px 8px rgba(41, 120, 247, 0.15);
+}
+
+.nums:active {
+    background-color: #283142;
+    border: 1px solid #4b5e75;
+    color: white;
+    transform: scale(1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+}
+
+.AC:active {
+    color: #F57173;
+    background-color: rgba(87, 66, 81, 0.5);
+    border: 1px solid rgb(95, 63, 78);
+    transform: scale(1);
+    box-shadow: 0px 0px 5px rgba(227, 145, 145, 0.25);
+}
+
+.equal:active {
+    background-color: rgba(43, 128, 18, 0.6);
+    transform: scale(1);
+    box-shadow: 0px 0px 8px rgba(15, 167, 63, 0.15);
+}
